@@ -70,23 +70,28 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
+            pictureBox4.Visible = false;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.buske;
-            pictureBox3.Location = new Point(48, 240);
+            pictureBox3.Location = new Point(39, 240);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(350, 198);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // timer1
             // 
+            timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
             // timer2
             // 
+            timer2.Enabled = true;
+            timer2.Interval = 500;
             timer2.Tick += timer2_Tick;
             // 
             // Form1
@@ -94,10 +99,10 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox2);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
